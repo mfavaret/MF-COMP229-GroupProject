@@ -1,0 +1,282 @@
+<%- include('../partials/header.ejs') %>
+
+    <%- include('../partials/main_nav.ejs') %>
+<!-- Main Content -->
+
+        <!-- Content  for the add page -->
+        <div class="survey" style="margin-bottom: 80px;">
+            <div class="container">
+                <div class="row" style="padding-top: 48px;">
+                    <div class="offset-md-2 col-md-8">
+                        <h1>
+                            <% title %>
+                        </h1>
+                        <% if (template.Name=="Survey 1" ) { %>
+                        <!-- FORM SURVEY 1 -->
+                        <form class="form" method="post" id="form-print">
+                            <div class="row">
+                                <div class="col-sm-10">
+                                    <h4>
+                                        Survey 1
+                                    </h4>
+                                </div>
+                            </div>
+                            <!-- HIDDEN FIELDS -->
+                            <fieldset>
+                                <div class="form-check">
+                                    <input type="hidden" id="fci1TextField" name="templateID"
+                                        value="<%= template.id  %> " />
+                                    <input type="hidden" id="fci1TextField" name="templateName"
+                                        value="<%= template.Name %> " />
+                                </div>
+                            </fieldset>
+                            <!-- QUESTION 1 -->
+                            <div class="form-check">
+                                <legend class="col-form-label col-sm-6" name="Q1"><%= template.Q1 %></legend>
+                                <input type="hidden" value="<%= template.Q1 %>" name="Q1"/>
+                            </div>
+                            <fieldset>
+                                <div class="form-check">
+                                    <div class="input-group">      
+                                        <input class="form-check-input me-2" type="radio" id="radioAQ1" name="AQ1" required value="<%= template.A1Q1 %>"/>
+                                        <%= template.A1Q1 %>
+                                    </div>
+                                    <div class="input-group">  
+                                        <input class="form-check-input me-2" type="radio" id="radioAQ1" name="AQ1" required value="<%= template.A2Q1 %>"/>
+                                        <%= template.A2Q1 %>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <br/>
+                            <!-- QUESTION 2 -->
+                            <div class="form-check">
+                                <legend class="col-form-label col-sm-6" name="Q2"><%= template.Q2 %></legend>
+                                <input type="hidden" value="<%= template.Q2 %>" name="Q2"/>
+                            </div>
+                            <fieldset>
+                                <div class="form-check" style="padding-left: 0px;">
+                                    <div class="input-group">
+                                        <textarea class="form-control" name="AQ2" required></textarea>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <br/>
+                            <!-- QUESTION 3 -->
+                            <div class="form-check">
+                                <legend class="col-form-label col-sm-6" name="Q3"><%= template.Q3 %></legend>
+                                <input type="hidden" value="<%= template.Q3 %>" name="Q3"/>
+                            </div>
+                            <fieldset>
+                                <div class="form-check">
+                                    <div class="input-group">      
+                                        <input class="form-check-input me-1" type="radio" id="radioAQ3" name="AQ3" required value="<%= template.A1Q3 %>"/>
+                                        <%= template.A1Q3 %>
+                                    </div>
+                                    <div class="input-group">  
+                                        <input class="form-check-input me-1" type="radio" id="radioAQ3" name="AQ3" required value="<%= template.A2Q3 %>"/>
+                                        <%= template.A2Q3 %>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="input-group">      
+                                        <input class="form-check-input me-1" type="radio" id="radioAQ3" name="AQ3" required value="<%= template.A3Q3 %>"/>
+                                        <%= template.A3Q3 %>
+                                    </div>
+                                    <div class="input-group">  
+                                        <input class="form-check-input me-1" type="radio" id="radioAQ3" name="AQ3" required value="<%= template.A4Q3 %>"/>
+                                        <%= template.A4Q3 %>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <br/>
+                            <!-- QUESTION 4 -->
+                            <div class="form-check">
+                                <legend class="col-form-label col-sm-6" name="Q4"><%= template.Q4 %></legend>
+                                <input type="hidden" value="<%= template.Q4 %>" name="Q4"/>
+                            </div>
+                            <fieldset>
+                                <div class="form-check">
+                                    <div class="input-group">      
+                                        <input class="form-check-input me-1" type="radio" id="radioAQ4" name="AQ4" required value="<%= template.A1Q4 %>"/>
+                                        <%= template.A1Q4 %>
+                                    </div>
+                                    <div class="input-group">  
+                                        <input class="form-check-input me-1" type="radio" id="radioAQ4" name="AQ4" required value="<%= template.A2Q4 %>"/>
+                                        <%= template.A2Q4 %>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="input-group">      
+                                        <input class="form-check-input me-1" type="radio" id="radioAQ4" name="AQ4" required value="<%= template.A3Q4 %>"/>
+                                        <%= template.A3Q4 %>
+                                    </div>
+                                    <div class="input-group">  
+                                        <input class="form-check-input me-1" type="radio" id="radioAQ4" name="AQ4" required value="<%= template.A4Q4 %>"/>
+                                        <%= template.A4Q4 %>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <br/>
+                            <!-- QUESTION 5 -->
+                            <div class="form-check">
+                                <legend class="col-form-label col-sm-6" name="Q5"><%= template.Q5 %></legend>
+                                <input type="hidden" value="<%= template.Q5 %>" name="Q5"/>
+                            </div>
+                            <fieldset>
+                                <div class="form-check" style="padding-left: 0px;">
+                                    <div class="input-group">   
+                                        <textarea class="form-control" name="AQ5" required></textarea>   
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <br/>
+                            <!-- QUESTION 6 -->
+                            <div class="form-check">
+                                <legend class="col-form-label col-sm-6" name="Q6"><%= template.Q6 %></legend>
+                                <input type="hidden" value="<%= template.Q6 %>" name="Q6"/>
+                            </div>
+                            <fieldset>
+                                <div class="form-check" style="padding-left: 0px;">
+                                    <div class="input-group">   
+                                        <textarea class="form-control" name="AQ6" required></textarea>   
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <br/>
+                        </form>
+                        <div class="form-group">
+                            <button name="submitForm" class="btn btn-primary" type="submit" style="margin-bottom: 100px;">
+                                <i class="fas fa-edit"></i>Submit
+                            </button>
+
+                            <a href="/survey" class="btn btn-warning" style="margin-bottom: 100px;">
+                                <i class="fas fa-undo"></i>Cancel
+                            </a>
+                        </div>
+                        <% } else if (template.Name=="Survey 2" ){ %>
+                        <!-- FORM SURVEY 2 -->
+                        <form class="form" method="post" id="form-print">
+                            <div class="row">
+                                <div class="col-sm-10">
+                                    <h4>
+                                        Survey 2
+                                    </h4>
+                                </div>
+                            </div>
+                            <!-- HIDDEN FIELDS -->
+                            <fieldset>
+                                <div class="form-check">
+                                    <input type="hidden" id="fci1TextField" name="templateID"
+                                        value="<%= template.id  %> " />
+                                    <input type="hidden" id="fci1TextField" name="templateName"
+                                        value="<%= template.Name %> " />
+                                </div>
+                            </fieldset>
+                            <!-- QUESTION 1 -->
+                            <div class="form-check">
+                                <legend class="col-form-label col-sm-6" name="Q1"><%= template.Q1 %></legend>
+                                <input type="hidden" value="<%= template.Q1 %>" name="Q1"/>
+                            </div>
+                            
+                            <fieldset>
+                                <div class="form-check">
+                                    <div class="input-group">      
+                                        <input class="form-check-input me-1" type="radio" id="radioAQ1" name="AQ1" required value="<%= template.A1Q1 %>"/>
+                                        <%= template.A1Q1 %>
+                                    </div>
+                                    <div class="input-group">  
+                                        <input class="form-check-input me-1" type="radio" id="radioAQ1" name="AQ1" required value="<%= template.A2Q1 %>"/>
+                                        <%= template.A2Q1 %>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <br/>
+                            <!-- QUESTION 2 -->
+                            <div class="form-check">
+                                <legend class="col-form-label col-sm-6" name="Q2"><%= template.Q2 %></legend>
+                                <input type="hidden" value="<%= template.Q2 %>" name="Q2"/>
+                            </div>
+                            <fieldset>
+                                <div class="form-check">
+                                    <div class="input-group">      
+                                        <input class="form-check-input me-1" type="radio" id="radioAQ2" name="AQ2" required value="<%= template.A1Q2 %>"/>
+                                        <%= template.A1Q2 %>
+                                    </div>
+                                    <div class="input-group">  
+                                        <input class="form-check-input me-1" type="radio" id="radioAQ2" name="AQ2" required value="<%= template.A2Q2 %>"/>
+                                        <%= template.A2Q2 %>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <br/>
+                            <!-- QUESTION 3 -->
+                            <div class="form-check">
+                                <legend class="col-form-label col-sm-6" name="Q3"><%= template.Q3 %></legend>
+                                <input type="hidden" value="<%= template.Q3 %>" name="Q3"/>
+                            </div>
+                            <fieldset>
+                                <div class="form-check" style="padding-left: 0px;">
+                                    <div class="input-group">      
+                                        <textarea class="form-control" name="AQ3" required></textarea>   
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <br/>
+                            <!-- QUESTION 4 -->
+                            <div class="form-check">
+                                <legend class="col-form-label col-sm-6" name="Q4"><%= template.Q4 %></legend>
+                                <input type="hidden" value="<%= template.Q4 %>" name="Q4"/>
+                            </div>
+                            <fieldset>
+                                <div class="form-check" style="padding-left: 0px;">
+                                    <div class="input-group">      
+                                        <textarea class="form-control" name="AQ4" required></textarea>   
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <br/>
+                            <!-- QUESTION 5 -->
+                            <div class="form-check">
+                                <legend class="col-form-label col-sm-6" name="Q5"><%= template.Q5 %></legend>
+                                <input type="hidden" value="<%= template.Q5 %>" name="Q5"/>
+                            </div>
+                            <fieldset>
+                                <div class="form-check" style="padding-left: 0px;">
+                                    <div class="input-group">   
+                                        <textarea class="form-control" name="AQ5" required></textarea>   
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <br/>
+                            <!-- QUESTION 6 -->
+                            <div class="form-check">
+                                <legend class="col-form-label col-sm-6" name="Q6"><%= template.Q6 %></legend>
+                                <input type="hidden" value="<%= template.Q6 %>" name="Q6"/>
+                            </div>
+                            <fieldset>
+                                <div class="form-check" style="padding-left: 0px;">
+                                    <div class="input-group">   
+                                        <textarea class="form-control" name="AQ6" required></textarea>   
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <br/>
+                        </form>
+                        <div class="form-group">
+                            <button name="submitForm" class="btn btn-primary" style="margin-bottom: 100px;">
+                                <i class="fas fa-edit"></i>Submit
+                            </button>
+
+                            <a href="/survey" class="btn btn-warning" style="margin-bottom: 100px;">
+                                <i class="fas fa-undo"></i>Cancel
+                            </a>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%- include('../partials/bottom_nav.ejs') %>
+
+            <%- include('../partials/footer.ejs') %>

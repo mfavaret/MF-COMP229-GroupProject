@@ -1,0 +1,95 @@
+<%- include('../partials/header.ejs') %>
+
+<%- include('../partials/main_nav.ejs') %>
+
+<!-- Main Content -->
+<main class="container">
+  <div class="row justify-content-center" style="padding-top: 48px; padding-bottom: 80px;">
+    <div class="col-md-offset-3 col-md-8">
+      <h1><%=title %></h1>
+      <% if(typeof displayName == 'string' && displayName) { %>
+        <a href="/survey" class="btn btn-primary" role="button">
+        <i class ="fas fa-plus-circle"></i> New survey</a>
+        <a href="/survey-list/results" class="btn btn-primary" role="button">
+          <i class="fas fa-poll"></i> Satatistics</a>
+      <% } %>
+      <br/>
+      <br/>
+      <table class="table table-bordered table-striped table-hover" >
+        <!--Header row-->
+        <tr>
+           <% if(typeof displayName == 'string' && displayName) { %>
+            <th class="text-center col-3">Q 1</th>
+            <th class="text-center col-3">A 1</th>
+            <th class="text-center col-3">Q 2</th>
+            <th class="text-center col-3">A 2</th>
+            <th class="text-center col-3">Q 3</th>
+            <th class="text-center col-3">A 3</th>
+            <th class="text-center col-3">Q 4</th>
+            <th class="text-center col-3">A 4</th>
+            <th class="text-center col-3">Q 5</th>
+            <th class="text-center col-3">A 5</th>
+            <th class="text-center col-3">Q 6</th>
+            <th class="text-center col-3">A 6</th>
+            <th class="text-center col-1"></th>
+          <% } else { %>
+            <th class="text-center col-3">Q 1</th>
+            <th class="text-center col-3">A 1</th>
+            <th class="text-center col-3">Q 2</th>
+            <th class="text-center col-3">A 2</th>
+            <th class="text-center col-3">Q 3</th>
+            <th class="text-center col-3">A 3</th>
+            <th class="text-center col-3">Q 4</th>
+            <th class="text-center col-3">A 4</th>
+            <th class="text-center col-3">Q 5</th>
+            <th class="text-center col-3">A 5</th>
+            <th class="text-center col-3">Q 6</th>
+            <th class="text-center col-3">A 6</th>
+          <% } %>   
+        </tr>
+
+        <!--Repetable Templet row-->
+        <% for (let count=0; count<SurveyList.length; count++){%>
+          <tr>
+             <% if(typeof displayName == 'string' && displayName) { %>
+              <td class="text-centre "><%=SurveyList[count].Q1 %></td>
+              <td class="text-centre "><%=SurveyList[count].AQ1 %></td>
+              <td class="text-centre "><%=SurveyList[count].Q2 %></td>
+              <td class="text-centre "><%=SurveyList[count].AQ2 %></td>
+              <td class="text-centre "><%=SurveyList[count].Q3 %></td>
+              <td class="text-centre "><%=SurveyList[count].AQ3 %></td>
+              <td class="text-centre "><%=SurveyList[count].Q4 %></td>
+              <td class="text-centre "><%=SurveyList[count].AQ4 %></td>
+              <td class="text-centre "><%=SurveyList[count].Q5 %></td>
+              <td class="text-centre "><%=SurveyList[count].AQ5 %></td>
+              <td class="text-centre "><%=SurveyList[count].Q6 %></td>
+              <td class="text-centre "><%=SurveyList[count].AQ6 %></td>          
+              <td class="text-center col-1">
+                <a href="/survey-list/delete/<%= SurveyList[count]._id %>" class="btn btn-danger btn-sm">
+                <i class="fas fa-trash-alt"></i> Delete</a>
+              </td>
+            <% } else { %>
+              <td class="text-centre "><%=SurveyList[count].Q1 %></td>
+              <td class="text-centre "><%=SurveyList[count].AQ1 %></td>
+              <td class="text-centre "><%=SurveyList[count].Q2 %></td>
+              <td class="text-centre "><%=SurveyList[count].AQ2 %></td>
+              <td class="text-centre "><%=SurveyList[count].Q3 %></td>
+              <td class="text-centre "><%=SurveyList[count].AQ3 %></td>
+              <td class="text-centre "><%=SurveyList[count].Q4 %></td>
+              <td class="text-centre "><%=SurveyList[count].AQ4 %></td>
+              <td class="text-centre "><%=SurveyList[count].Q5 %></td>
+              <td class="text-centre "><%=SurveyList[count].AQ5 %></td>
+              <td class="text-centre "><%=SurveyList[count].Q6 %></td>
+              <td class="text-centre "><%=SurveyList[count].AQ6 %></td>          
+              <td class="text-center col-1">    
+            <% } %> 
+          </tr>
+        <% } %>
+      </table>
+    </div>
+  </div>
+</main>
+
+<%- include('../partials/bottom_nav.ejs') %>
+
+<%- include('../partials/footer.ejs') %>
