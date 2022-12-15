@@ -30,4 +30,6 @@ router.post("/add/:id", surveyController.addprocesspage);
 /* GET to perform  Deletion - DELETE Operation */
 router.get("/delete/:id", requireAuth, surveyController.deletepage);
 
+// router.get("/survey", surveyController.surveyList)
+
 module.exports = router;

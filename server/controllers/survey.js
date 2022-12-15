@@ -1,6 +1,7 @@
 let express = require("express");
 let router = express.Router();
 let mongoose = require("mongoose");
+const survey = require("../models/survey");
 
 // Create reference to the model
 let Survey = require("../models/survey");
@@ -18,6 +19,12 @@ module.exports.displaySurveyList = (req, res, next) => {
         }
     });
 };
+
+
+// module.exports.surveyList = (req, res, next) => {
+//   let lifetime = req.params.lifetime;
+//   res.render("index", { title: "Survey", displayName: req.user? req.user.displayName : ''});
+// };
 
 module.exports.addpage = (req, res, next) => {
     let id = req.params.id; //id of actual object

@@ -18,6 +18,7 @@ let surveyModel = mongoose.Schema({
     AQ5: String,
     Q6: String,
     AQ6: String,
+    lifetime: String,
 },
 {
     collection: "surveys"
